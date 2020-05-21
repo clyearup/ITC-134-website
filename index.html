@@ -5,7 +5,7 @@
     <title>Virtual Education During COVID-19</title>
     <script>
         function switchText1() {
-            var s1 = document.getElementById("home");
+            var s1 = document.getElementById("section1");
             var s2 = document.getElementById("section2");
             var s3 = document.getElementById("section3");
             var s4 = document.getElementById("section4");
@@ -17,7 +17,7 @@
             }
         } 
         function switchText2() {
-            var s1 = document.getElementById("home");
+            var s1 = document.getElementById("section1");
             var s2 = document.getElementById("section2");
             var s3 = document.getElementById("section3");
             var s4 = document.getElementById("section4");
@@ -29,7 +29,7 @@
             }
         } 
         function switchText3() {
-            var s1 = document.getElementById("home");
+            var s1 = document.getElementById("section1");
             var s2 = document.getElementById("section2");
             var s3 = document.getElementById("section3");
             var s4 = document.getElementById("section4");
@@ -41,7 +41,7 @@
             }
         } 
         function switchText4() {
-            var s1 = document.getElementById("home");
+            var s1 = document.getElementById("section1");
             var s2 = document.getElementById("section2");
             var s3 = document.getElementById("section3");
             var s4 = document.getElementById("section4");
@@ -54,7 +54,7 @@
         } 
     </script>
     <style>
-        body {
+        html {
            background-color: #8E8D8A;
            text-align: center;
         }
@@ -64,22 +64,18 @@
         p {
             margin: 0px auto;
         }
-        .center {
-            height:50px;
-            text-align: center;
-        }
         main {
-            margin: auto;
+            margin: 0px;
             height: 450px;
             background-color: #eae7dc;
             overflow:hidden;
+            text-align:left
         }
         nav, footer {
             background-color:#e85a4f;
             color: black;
         }
         section.leftSec {
-            text-align: center;
             height: 450px;
             background-color: #e98074;
             float: left;
@@ -89,10 +85,21 @@
             padding-left: 0;
             list-style-type: none;
         }
+        .padding {
+            padding-left: 50px;
+            padding-right: 50px;
+            padding-top: 40px;
+        }
+        .container{
+            max-width: 1100px;
+        }
+        h2 {
+            text-align:left;
+        }
     </style>
 </head>
 <body>
-    <div>
+    <div class="container">
         <!-- Header Start -->
         <header>
             <!-- Banner Start -->
@@ -101,7 +108,7 @@
 
             <!-- Nav Bar Start -->
             <nav>
-                <a href="#home" onclick="switchText1()" title="Home">Home</a> &nbsp;|&nbsp;
+                <a href="#section1" onclick="switchText1()" title="Home">Home</a> &nbsp;|&nbsp;
                 <a href="#section2" onclick="switchText2()" title="Section 2">Section 2</a> &nbsp;|&nbsp;
                 <a href="#section3" onclick="switchText3()" title="Section 3">Section 3</a> &nbsp;|&nbsp;
                 <a href="#section4" onclick="switchText4()" title="Resourses">Resources</a>
@@ -109,7 +116,6 @@
             <!-- Nav Start -->
         </header>
         <!-- Header End -->
-    <main>
         <!--Link Section Start -->
         <section class="leftSec"><br>
             <p >Links</p>
@@ -130,32 +136,31 @@
             </ul>
         </section>
         <!-- link section End -->
+        <main class="container">
 
-        <!-- HeaderLink Start -->
-        <section class="center" id="home">
-            <h2>Home</h2>
-            <p id="linkDetail">The use of technology in relation to the current state of the world. Technology has been known to make the teaching/learning process easier and smooth going. 
-The world is in the middle of a pandemic at this moment and the education and professional world has been relying heavily on more recent technology in order to maintain the teaching/learning process. One of the main ways that schools have taken advantage of is video calls. The most popular application that is currently being used world-wide for this purpose is Zoom. 
-This by far has proved to be the best and safest way to go about maintaining the education process. Some places that don’t have access to a stable internet connection are also making use of emails that are scheduled at certain times. Technology has come in extremely handy during this current crisis that the world is going through. 
-</p>
-        </section>
-        <section style="display:none" id="section2">
-            <h2>Section 2</h2>
-        </section>
-        <section style="display:none" id="section3">
-            <h2>Section 3</h2>
-        </section>
-        <section style="display:none" id="section4">
-            <h2>Section 4</h2>
-        </section>
-        <!-- Header Link Start -->
-
-    </main>
-
+            <!-- HeaderLink Start -->
+            <section class="padding" id="section1">
+                <h2>Home</h2>
+                <p>The use of technology in relation to the current state of the world. Technology has been known to make the teaching/learning process easier and smooth going. 
+    The world is in the middle of a pandemic at this moment and the education and professional world has been relying heavily on more recent technology in order to maintain the teaching/learning process. One of the main ways that schools have taken advantage of is video calls. The most popular application that is currently being used world-wide for this purpose is Zoom. 
+    This by far has proved to be the best and safest way to go about maintaining the education process. Some places that don’t have access to a stable internet connection are also making use of emails that are scheduled at certain times. Technology has come in extremely handy during this current crisis that the world is going through. 
+    </p>
+            </section>
+            <section class="padding" style="display:none" id="section2">
+                <h2>Section 2</h2>
+            </section>
+            <section class="padding" style="display:none" id="section3">
+                <h2>Section 3</h2>
+            </section>
+            <section class="padding" style="display:none" id="section4">
+                <h2>Section 4</h2>
+            </section>
+            <!-- Header Link Start -->
+            
+        </main>
         <footer>
             <p>Copyright &copy; Christopher Luhrman, Kerkphon Ketboonsai, Rodas Gebremariam</p>
         </footer>
-
     </div>
 </body>
 </html>
