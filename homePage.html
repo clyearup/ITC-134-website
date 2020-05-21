@@ -2,26 +2,70 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ITC 111 Webpage Assignment</title>
+    <title>Virtual Education During COVID-19</title>
     <script>
-        document.getElementById("section2").onclick = function () {
-        location.href = "#section2";
-    }; //edit
+        function switchText1() {
+            var s1 = document.getElementById("home");
+            var s2 = document.getElementById("section2");
+            var s3 = document.getElementById("section3");
+            var s4 = document.getElementById("section4");
+            if (s1.style.display === "none") {
+                s1.style.display = "block";
+                s2.style.display = "none";
+                s3.style.display = "none";
+                s4.style.display = "none";
+            }
+        } 
+        function switchText2() {
+            var s1 = document.getElementById("home");
+            var s2 = document.getElementById("section2");
+            var s3 = document.getElementById("section3");
+            var s4 = document.getElementById("section4");
+            if (s2.style.display === "none") {
+                s1.style.display = "none";
+                s2.style.display = "block";
+                s3.style.display = "none";
+                s4.style.display = "none";
+            }
+        } 
+        function switchText3() {
+            var s1 = document.getElementById("home");
+            var s2 = document.getElementById("section2");
+            var s3 = document.getElementById("section3");
+            var s4 = document.getElementById("section4");
+            if (s3.style.display === "none") {
+                s1.style.display = "none";
+                s2.style.display = "none";
+                s3.style.display = "block";
+                s4.style.display = "none";
+            }
+        } 
+        function switchText4() {
+            var s1 = document.getElementById("home");
+            var s2 = document.getElementById("section2");
+            var s3 = document.getElementById("section3");
+            var s4 = document.getElementById("section4");
+            if (s4.style.display === "none") {
+                s1.style.display = "none";
+                s2.style.display = "none";
+                s3.style.display = "none";
+                s4.style.display = "block";
+            }
+        } 
     </script>
     <style>
+        body {
+           background-color: #8E8D8A;
+           text-align: center;
+        }
         div {
             margin: 0px auto;
         }
         p {
-            margin: 0px;
+            margin: 0px auto;
         }
         .center {
-            margin-top: 10%;
             height:50px;
-            text-align: center;
-        }
-        header, nav, footer {
-            background-color: #8E8D8A;
             text-align: center;
         }
         main {
@@ -34,7 +78,7 @@
             background-color:#e85a4f;
             color: black;
         }
-        section.left {
+        section.leftSec {
             text-align: center;
             height: 450px;
             background-color: #e98074;
@@ -45,7 +89,6 @@
             padding-left: 0;
             list-style-type: none;
         }
-
     </style>
 </head>
 <body>
@@ -53,22 +96,22 @@
         <!-- Header Start -->
         <header>
             <!-- Banner Start -->
-            <h1 >Virtual Education during COVID-19</h1>
+            <h1 >Virtual Education During COVID-19</h1>
             <!-- Banner End -->
 
             <!-- Nav Bar Start -->
             <nav>
-                <a href="#home" title="Home">Home</a> &nbsp;|&nbsp;
-                <a href="#section2" title="Section 2">Section 2</a> &nbsp;|&nbsp;
-                <a href="#section3" title="Section 3">Section 3</a> &nbsp;|&nbsp;
-                <a href="#section4" title="Resourses">Resources</a>
+                <a href="#home" onclick="switchText1()" title="Home">Home</a> &nbsp;|&nbsp;
+                <a href="#section2" onclick="switchText2()" title="Section 2">Section 2</a> &nbsp;|&nbsp;
+                <a href="#section3" onclick="switchText3()" title="Section 3">Section 3</a> &nbsp;|&nbsp;
+                <a href="#section4" onclick="switchText4()" title="Resourses">Resources</a>
             </nav>
             <!-- Nav Start -->
         </header>
         <!-- Header End -->
     <main>
         <!--Link Section Start -->
-        <section class="left"><br>
+        <section class="leftSec"><br>
             <p >Links</p>
             <hr>
             <ul>
@@ -84,45 +127,28 @@
                 <li>
                     <a href="#"  title="Assignment 04 Link">A04</a>
                 </li>
-                <li>
-                    <a href="#"  title="Assignment 05 Link">A05</a>
-                </li>
-                <li>
-                    <a href="#"  title="Assignment 06 Link">A06</a>
-                </li>
-                <li>
-                    <a href="#"  title="Assignment 07 Link">A07</a>
-                </li>
-                <li>
-                    <a href="#"  title="Assignment 08 Link">A08</a>
-                </li>
-                <li>
-                    <a href="#"  title="Assignment 09 Link">A09</a>
-                </li>
-                <li>
-                    <a href="#"  title="Assignment 10 Link">A10</a>
-                </li>
             </ul>
         </section>
         <!-- link section End -->
 
-        <!-- Side Bar Start -->
-        <section class="center">
+        <!-- HeaderLink Start -->
+        <section class="center" id="home">
+            <h2>Home</h2>
             <p id="linkDetail">The use of technology in relation to the current state of the world. Technology has been known to make the teaching/learning process easier and smooth going. 
 The world is in the middle of a pandemic at this moment and the education and professional world has been relying heavily on more recent technology in order to maintain the teaching/learning process. One of the main ways that schools have taken advantage of is video calls. The most popular application that is currently being used world-wide for this purpose is Zoom. 
 This by far has proved to be the best and safest way to go about maintaining the education process. Some places that don’t have access to a stable internet connection are also making use of emails that are scheduled at certain times. Technology has come in extremely handy during this current crisis that the world is going through. 
 </p>
         </section>
-        <section hidden id="section2">
+        <section style="display:none" id="section2">
             <h2>Section 2</h2>
         </section>
-        <section hidden id="section3">
+        <section style="display:none" id="section3">
             <h2>Section 3</h2>
         </section>
-        <section hidden id="section4">
+        <section style="display:none" id="section4">
             <h2>Section 4</h2>
         </section>
-        <!-- Side Bar End -->
+        <!-- Header Link Start -->
 
     </main>
 
